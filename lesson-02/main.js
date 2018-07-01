@@ -25,17 +25,44 @@ for (let k = 1; k <= 10; k++) {
 */
 //
 
+// let x = Number(prompt("Введите число: "));
 
-var x = Number(prompt("Введите число: "));
-var j = 0;
-if (x <= 0 ) {
-    alert("введите число большее нуля");
-    } else document.write(x);
-document.write("<br>");
-for (var i = 1; i <= x; i++) {
-document.write(i);
-if (i <= (x - 1)) document.write( " + " );
-j = j + i; 
-if (i == x) document.write( " = " + j);
-}
-document.write("<br>" + "Сумма чисел от 1 до "  + x + " равнa " + j);
+// let j = 0;
+
+// if (x <= 0 ) {
+//     alert("введите число большее нуля");
+// } else document.write(x + "<br>");
+
+// for (let i = 1; i <= x; i++) {
+
+//     document.write(i);
+
+//     if (i <= (x - 1)) {
+//         document.write( " + " )
+//     };
+
+//     j = j + i; 
+
+//     if (i == x) {
+//         document.write( " = " + j)
+//     };
+// }
+
+// document.write("<br>" + "Сумма чисел от 1 до "  + x + " равнa " + j);
+
+function palindrome(str) {
+    var strLen = str.length,
+        strReverse = str.split('').reverse().join('');
+    if (strReverse === str) {
+      return 'yes';
+    } else {
+      return 'no';
+    }
+  }
+ 
+  result = palindrome(prompt("Введите слово: "));
+
+  document.write(' Результат: ' + result);
+
+
+ 
