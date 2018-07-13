@@ -1,4 +1,24 @@
 /*
+let x = prompt('Введите ваш email');
+
+ alert(x.match(/[\w+\d*\W\w\.\w]/ig));
+ 
+ for(var i = 0; i < 10; i++){
+ 
+     (function(i) {
+ 
+           setTimeout(function(){
+ 
+             document.write(i);
+ 
+           }, 100);
+ 
+     })(i);
+ 
+   }  
+*/
+ //
+/*
 function fib(n) {
     return n <= 1 ? n : fib(n - 1) + fib(n - 2);
   }
@@ -7,11 +27,28 @@ function fib(n) {
   alert( fib(7) );
  */
  //
- var i = 0;
-var arr = ['Внимание, начинаем массаж спины!', 'вы чувствуете расслабление', 'пошло тепло', 'усталость уходит', 'вам становится лучше', 'с вас 100 рублей!'];
+ let imgX = document.getElementById('imgX');
 
-setInterval(function() {
-  if (i > 5) i = 0;
-  document.body.innerHTML = arr[i];
-  i++;
-}, 2000);
+ let step = 1;
+ 
+ let interval;
+ 
+ function flyImg(){
+ 
+     for(let i = 0; i<10;i++){
+ 
+         imgX.style.left =(step += 1) + "px";
+ 
+         if(step>=500){
+ 
+             clearInterval(interval);
+ 
+         } 
+ 
+     }    
+ 
+ }
+ 
+ interval = setInterval(flyImg,100);
+ 
+ 
